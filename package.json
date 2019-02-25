@@ -1,6 +1,9 @@
 {
   "name": "@entrinsik/geocodio",
-  "version": "1.0.0",
+  "version": "0.0.0",
+  "publishConfig": {
+    "registry": "https://docker.entrinsik.com/repository/entNPM/"
+  },
   "description": "A geocod.io flow step for Informer that turns an address into a geo coordinate",
   "main": "lib/index.js",
   "directories": {

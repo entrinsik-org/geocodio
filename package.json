@@ -1,7 +1,7 @@
 {
-  "name": "node-module-template",
-  "version": "0.0.0",
-  "description": "A description of your module",
+  "name": "@entrinsik/geocodio",
+  "version": "1.0.0",
+  "description": "A geocod.io flow step for Informer that turns an address into a geo coordinate",
   "main": "lib/index.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "module_git_repo"
   },
-  "author": "",
+  "author": "Entrinsik",
   "license": "MIT",
   "devDependencies": {
     "chai": "^2.1.1",
@@ -27,5 +27,10 @@
     "gulp-tag-version": "^1.2.1",
     "jshint-stylish": "^1.0.1",
     "mocha": "^2.2.1"
+  },
+  "dependencies": {
+    "ent-streams": "^1.13.0",
+    "joi": "^9.0.4",
+    "lodash": "^3.10.1"
   }
 }

@@ -1,8 +1,22 @@
 'use strict';
 
+const path = require('path');
+
 exports.register = function (server, opts, next) {
     const bundle = server.bundle('geocodio').scan(__dirname, 'public');
     server.injector().inject(bundle);
+
+    server.select('content').route({method: 'GET', path: '/assets/geocodio/images/{path*}', config: {
+            auth: false,
+            handler: {
+                directory: {
+                    path: path.resolve(__dirname, './public/images'),
+                    listing: false,
+                    index: false
+                }
+            }
+        }});
+
 
     const installFlowStep = feature => server.driver('flow', require('./lib/flow-step')(server, feature.data.apiKey));
 
